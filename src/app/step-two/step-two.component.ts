@@ -16,7 +16,8 @@ export class StepTwoComponent implements OnInit, OnDestroy {
 
   ngOnInit() {
     this.form = this.builder.group({
-      street: ['', Validators.required],
+      selbsbeteiligung: ['200', Validators.required],
+      vertragsLaufzeit: ['3', Validators.required],
 
     });
 

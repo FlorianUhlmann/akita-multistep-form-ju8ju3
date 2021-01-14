@@ -1,17 +1,26 @@
 <form [formGroup]="form">
-  <mat-button-toggle-group formControlname="housebutton" #group="matButtonToggleGroup" >
-    <mat-button-toggle value="Einfamilienhaus">Einfamilienhaus</mat-button-toggle>
-    <mat-button-toggle value="Mehrfamilienhaus">Mehrfamilinehaus</mat-button-toggle>
+  <mat-button-toggle-group formControlName="housebutton"  [(ngModel)]="value" value="All">
+    <mat-button-toggle value="Einfamilienhaus"
+      >Einfamilienhaus</mat-button-toggle
+    >
+    <mat-button-toggle value="Mehrfamilienhaus"
+      >Mehrfamilinehaus</mat-button-toggle
+    >
     <mat-button-toggle value="Wohnung">Wohnung</mat-button-toggle>
   </mat-button-toggle-group>
-<div class="example-selected-value">Selected value: {{group.value}}</div>
 
-   <mat-form-field>
-    <input matInput placeholder="Hausgröße in m²" formControlName="hausgroesse" />
+  <mat-form-field>
+    <input
+      matInput
+      placeholder="Hausgröße in m²"
+      formControlName="hausgroesse"
+    />
   </mat-form-field>
 
-    <mat-radio-group formControlName="options">
-        <mat-radio-button checked=true  value="1">Option 01</mat-radio-button>
-        <mat-radio-button  value="2">Option 02</mat-radio-button>
-      </mat-radio-group>
+  <mat-radio-group formControlName="options">
+    <mat-radio-button checked="true" value="Einfamilienhaus"
+      >Option 01</mat-radio-button
+    >
+    <mat-radio-button value="2">Option 02</mat-radio-button>
+  </mat-radio-group>
 </form>
