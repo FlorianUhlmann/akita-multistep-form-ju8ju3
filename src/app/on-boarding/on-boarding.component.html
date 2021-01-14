@@ -1,0 +1,11 @@
+<h1>Welcome!</h1>
+
+<button routerLink="/onboarding" mat-button validStep="one">Step One</button>
+<button routerLink="step-two" mat-button validStep="two">Step Two</button>
+
+
+<router-outlet></router-outlet>
+
+<footer>
+  <button mat-button (click)="submit()" [disabled]="!(isFormValid$ | async)">Submit</button>
+</footer>
