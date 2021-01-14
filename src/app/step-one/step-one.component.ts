@@ -1,10 +1,10 @@
-import { FormGroup, FormBuilder, Validators } from '@angular/forms';
-import { Component, OnInit, OnDestroy } from '@angular/core';
-import { AkitaNgFormsManager } from '@datorama/akita-ng-forms-manager';
+import { FormGroup, FormBuilder, Validators } from "@angular/forms";
+import { Component, OnInit, OnDestroy } from "@angular/core";
+import { AkitaNgFormsManager } from "@datorama/akita-ng-forms-manager";
 
 @Component({
-  selector: 'app-step-one',
-  templateUrl: './step-one.component.html'
+  selector: "app-step-one",
+  templateUrl: "./step-one.component.html"
 })
 export class StepOneComponent implements OnInit, OnDestroy {
   form: FormGroup;
@@ -12,15 +12,16 @@ export class StepOneComponent implements OnInit, OnDestroy {
   constructor(
     private builder: FormBuilder,
     private formsManager: AkitaNgFormsManager<any>
-  ) { }
+  ) {}
 
   ngOnInit() {
     this.form = this.builder.group({
-      name: ['', Validators.required],
-      email: ['', Validators.required]
+      hausgroesse: ["", Validators.required],
+      housebutton: [],
+      options: []
     });
 
-    this.formsManager.upsert('stepOne', this.form);
+    this.formsManager.upsert("stepOne", this.form);
   }
 
   ngOnDestroy() {
