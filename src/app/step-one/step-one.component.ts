@@ -16,7 +16,8 @@ export class StepOneComponent implements OnInit, OnDestroy {
 
   ngOnInit() {
     this.form = this.builder.group({
-      hausgroesse: ["100", Validators.required],
+      hausgroesse: ["150", Validators.required],
+      housebutton: ["Einfamilienhaus"]
     });
 
     this.formsManager.upsert("stepOne", this.form);
