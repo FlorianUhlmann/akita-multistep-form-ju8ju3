@@ -9,3 +9,5 @@
 <footer>
   <button mat-button (click)="submit()" [disabled]="!(isFormValid$ | async)">Submit</button>
 </footer>
+<h1> Angebot: {{isAngebotPreis}}</h1>
+<h2> buff: {{buff |json}} </h2>
