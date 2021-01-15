@@ -15,6 +15,7 @@
   <div>
     <mat-form-field>
       <input
+       (focusout)="sub(value)"
         matInput
         placeholder="Hausgröße in m²"
         formControlName="hausgroesse"

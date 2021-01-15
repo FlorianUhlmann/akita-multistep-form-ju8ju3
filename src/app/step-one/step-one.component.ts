@@ -26,4 +26,6 @@ export class StepOneComponent implements OnInit, OnDestroy {
   ngOnDestroy() {
     this.formsManager.unsubscribe();
   }
+
+  sub(val){console.log('focusout in label Hausgröße')}
 }
